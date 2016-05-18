@@ -9,8 +9,8 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/roboime.css" rel="stylesheet">
   </head>
-  <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset=80px>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -18,312 +18,341 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">RoboIME</a>
+          <a class="navbar-brand" class="page-scroll" href="#page-top">RoboIME</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href=".">Home</a></li>
+            <li><br /></li>
+            <li><a class="page-scroll" href="#intro">Intro</a></li>
+            <li><a class="page-scroll" href="#times">Times</a></li>
+            <li><a class="page-scroll" href="#desafios">Desafios</a></li>
+            <li><a class="page-scroll" href="#calendar">Calendário</a></li>
+            <li><a class="page-scroll" href="#inscription">Inscrição</a></li>
+            <li><a class="page-scroll" href="#contato">Contato</a></li>
+            <li><a class="page-scroll" href="#footer">Footer</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <a href="futebol.html#intro" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 Futebol de robôs
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
-                <li><a href="futebol.html">Sobre</a></li>
-                <li><a href="#">RoboCup SSL</a></li>
-                <li><a href="#">História</a></li>
-                <li><a href="#">Membros</a></li>
-                <li><a href="#">Publicações</a></li>
+                <li><a href="futebol.html#intro">Intro</a></li>
+                <li><a href="futebol.html#robocup">RoboCup SSL</a></li>
+                <li><a href="futebol.html#historia">História</a></li>
+                <li><a href="futebol.html#membros">Membros</a></li>
+                <li><a href="futebol.html#pub">Publicações</a></li>
               </ul>
             </li>
-            <li><a href="#resultados">Contato</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="https://www.facebook.com/roboime/"><span class="fa fa-facebook-official fa-lg hidden-xs"></span> <span class="visible-xs-block">Facebook</span></a></li>
+            <li><a href="https://github.com/roboime"><span class="fa fa-github fa-lg hidden-xs"></span> <span class="visible-xs-block">Github</span></a></li>
+            <li><a href="https://roboime.slack.com/"><span class="fa fa-slack fa-lg hidden-xs"></span> <span class="visible-xs-block">Slack</span></a></li>
           </ul>
         </div>
       </div>
     </nav>
-<div class="container-fluid">
-      <div class="jumbotron">
-        <div class="row">
-        <div class="col-md-8">
-          <h1>Futebol de robôs</h1>
-          <br>
-          <p>
-             O futebol de robôs é uma time da RoboIME para competir na RoboCup na categoria Small Size League.
-          </p>
-        </div>
-        <div class="col-md-4">
-          <img src="imgs/futebol.jpg" class="center-block" width=280px>
-        </div>
+    <div class="section">
+      <span id="init" class="anchor"></span>
+      <div class="container-fluid">
+        <div class="jumbotron">
+          <div class="row">
+            <div class="col-md-8">
+              <h1>Futebol de robôs</h1>
+              <br>
+              <p>
+                O futebol de robôs é uma time da RoboIME para competir na RoboCup na categoria Small Size League.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <img src="imgs/futebol.jpg" class="center-block" width=280px>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="container">
-      <h2>RoboCup SSL</h2>
-      <h3>O que é a RoboCup?</h3>
-      A RoboCup é uma competição anual de robótica fundada em 1997 com o objetivo de estimular pesquisas em robótica e inteligência artificial oferecendo um desafio público.
-      <br>
-      O desafio proposto pela RoboCup tem como objetivo principal:
-      <br>
-      "No meio do século 21, uma equipe de futebol de robôs
-      autônomos humanóides deve ganhar um jogo de futebol,
-      seguindo as regras oficiais da FIFA, contra o vencedor
-      da Copa do Mundo mais atual."
-      <br>
-      A competição possui 5 grandes competições principais, cada uma com suas ligas e subligas. A RoboIME participa somente da Small Size League.
-      <br>
-      <h3>O que é a Small Size League?</h3>
-      A Small Size League (SSL), também conhecida como F180, é uma competição com foco no problema da cooperação e no controle multi-agente inteligente em um ambiente altamente dinâmico com um sistema híbrido (centralizado/distribuído).
-      <br>
-      <br>
-      <img src="imgs/kick_off.png">
-      <br>
-      <br>
-      O jogo de futebol de robôs da SSL acontece com dois times de 6 robôs cada. Cada robôs com dimensões de acordo com as regras especificadas no site da competição. Os robôs têm que tem no máximo 180mm de diâmetro e não mais que 150mm de altura. Os robôs jogam futebol com uma bola de golf laranja em um campo de carpete verde de 6m de largura por 9m de comprimento.
-      <br>
-      <br>
-      <img src="imgs/vision_system.png">
-      <br>
-      <br>
-      Todos os objetos no campo são rastreados por um sistema de visão padronizado que processa os dados fornecidos pelas quatro câmeras localizadas 4m acima do campo. O sistema de visão, chamado SSL-Vision, é um projeto open-source mantido pela comunidade da SSL.
-      <br>
-      Cada equipe deve ter um computador que vai receber os comandos do juíz (à partir de agora chamado de referee) e as informações de posição dos robôs via Ethernet. Em geral esses computadores fazem todo o processamente necessário para a coordenação e controle dos robôs. A comunicação com os robôs é feita via wireless.
-      <hr>
-      <h2>História</h2>
-      A RoboIME participa de competições desde 2010.
-      <br>
-      <h3>Resultados</h3>
-      <ul>
-        <li>Em 2011 foi vice-campeão na Latin American Robotics Competition (LARC).</li>
-        <li>Em 2012 foi vice-campeão na Latin American Robotics Competition (LARC) e participou da RoboCup na Cidade do México.</li>
-        <li>Em 2013 participou da RoboCup em Eindhoven, na Holanda.</li>
-        <li>Em 2014 ficou em 4º lugar na Latin American Robotics Competition (LARC) e participou da RoboCup em João Pessoa.</li>
-      </ul>
-      <h3>Competições</h3>
-      <div class="row">
-        <div class="col-md-4">
-          <img src="imgs/larc_2010.jpg" class="center-block" height=240px>
-          <h3 align="center">LARC 2010</h3>
-        </div>
-        <div class="col-md-4">
-          <img src="imgs/obr_2011.jpg" class="center-block" height=240px>
-          <h3 align="center">OBR 2011</h3>
-        </div>
-        <div class="col-md-4">
-          <img src="imgs/robocup_2012.jpg" class="center-block" height=240px>
-          <h3 align="center">ROBOCUP 2012</h3>
-        </div>
-        <div class="col-md-4">
-          <img src="imgs/obr_2012.jpg" class="center-block" height=240px>
-          <h3 align="center">OBR 2012</h3>
-        </div>
+    <div class="section">
+      <span id="robocup" class="anchor"></span>
+      <div class="container">
+        <h2>RoboCup SSL</h2>
+        <h3>O que é a RoboCup?</h3>
+        A RoboCup é uma competição anual de robótica fundada em 1997 com o objetivo de estimular pesquisas em robótica e inteligência artificial oferecendo um desafio público.
+        <br>
+        O desafio proposto pela RoboCup tem como objetivo principal:
+        <br>
+        "No meio do século 21, uma equipe de futebol de robôs
+        autônomos humanóides deve ganhar um jogo de futebol,
+        seguindo as regras oficiais da FIFA, contra o vencedor
+        da Copa do Mundo mais atual."
+        <br>
+        A competição possui 5 grandes competições principais, cada uma com suas ligas e subligas. A RoboIME participa somente da Small Size League.
+        <br>
+        <h3>O que é a Small Size League?</h3>
+        A Small Size League (SSL), também conhecida como F180, é uma competição com foco no problema da cooperação e no controle multi-agente inteligente em um ambiente altamente dinâmico com um sistema híbrido (centralizado/distribuído).
+        <br>
+        <br>
+        <img src="imgs/kick_off.png">
+        <br>
+        <br>
+        O jogo de futebol de robôs da SSL acontece com dois times de 6 robôs cada. Cada robôs com dimensões de acordo com as regras especificadas no site da competição. Os robôs têm que tem no máximo 180mm de diâmetro e não mais que 150mm de altura. Os robôs jogam futebol com uma bola de golf laranja em um campo de carpete verde de 6m de largura por 9m de comprimento.
+        <br>
+        <br>
+        <img src="imgs/vision_system.png">
+        <br>
+        <br>
+        Todos os objetos no campo são rastreados por um sistema de visão padronizado que processa os dados fornecidos pelas quatro câmeras localizadas 4m acima do campo. O sistema de visão, chamado SSL-Vision, é um projeto open-source mantido pela comunidade da SSL.
+        <br>
+        Cada equipe deve ter um computador que vai receber os comandos do juíz (à partir de agora chamado de referee) e as informações de posição dos robôs via Ethernet. Em geral esses computadores fazem todo o processamente necessário para a coordenação e controle dos robôs. A comunicação com os robôs é feita via wireless.
+        <hr>
       </div>
-      <hr>
-      <h2>Equipe</h2>
-A RoboIME é coordenada pelo Prof. Dr. Paulo Rosa, diretor do Laboratório de Robótica e Inteligência Computacional, e gerenciada pelos próprios alunos da iniciativa. 
-Por ser uma equipe formada por alunos, em geral de graduação, a troca de integrantes é bem comum durante os anos, o que ocasiona vários problemas (que serão listados abaixo). 
+    </div>
+    <div class="section">
+      <span id="historia" class="anchor"></span>
+      <div class="container">
+        <h2>História</h2>
+        A RoboIME participa de competições desde 2010.
+        <br>
+        <h3>Resultados</h3>
+        <ul>
+          <li>Em 2011 foi vice-campeão na Latin American Robotics Competition (LARC).</li>
+          <li>Em 2012 foi vice-campeão na Latin American Robotics Competition (LARC) e participou da RoboCup na Cidade do México.</li>
+          <li>Em 2013 participou da RoboCup em Eindhoven, na Holanda.</li>
+          <li>Em 2014 ficou em 4º lugar na Latin American Robotics Competition (LARC) e participou da RoboCup em João Pessoa.</li>
+        </ul>
+        <h3>Competições</h3>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="imgs/larc_2010.jpg" class="center-block" height=240px>
+            <h3 align="center">LARC 2010</h3>
+          </div>
+          <div class="col-md-4">
+            <img src="imgs/obr_2011.jpg" class="center-block" height=240px>
+            <h3 align="center">OBR 2011</h3>
+          </div>
+          <div class="col-md-4">
+            <img src="imgs/robocup_2012.jpg" class="center-block" height=240px>
+            <h3 align="center">ROBOCUP 2012</h3>
+          </div>
+          <div class="col-md-4">
+            <img src="imgs/obr_2012.jpg" class="center-block" height=240px>
+            <h3 align="center">OBR 2012</h3>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <div class="section">
+      <span id="equipe" class="anchor"></span>
+      <div class="container">
+        <h2>Equipe</h2>
+        A RoboIME é coordenada pelo Prof. Dr. Paulo Rosa, diretor do Laboratório de Robótica e Inteligência Computacional, e gerenciada pelos próprios alunos da iniciativa. 
+        Por ser uma equipe formada por alunos, em geral de graduação, a troca de integrantes é bem comum durante os anos, o que ocasiona vários problemas (que serão listados abaixo). 
         <h3>Professores:</h3>
         <br>
-      <div class="row">
-        <div class="col-md-4 member-container">
-          <div class="member">
-            <div class="col-md-6">
-              <img src="paulorosa.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
-            </div>
-            <div class="col-md-6">
-              <a class="member-linkedin" href="https://br.linkedin.com/in/paulo-rosa-b9a91a1a/pt" style="margin-bottom:7px;">
-                <span class="fa fa-linkedin-square fa-2x" style="float:right; margin-top: 12px;">
-                </span>
+        <div class="row">
+          <div class="col-md-4 member-container">
+            <div class="member">
+              <div class="col-md-6">
+                <img src="paulorosa.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
+              </div>
+              <div class="col-md-6">
+                <a class="member-linkedin" href="https://br.linkedin.com/in/paulo-rosa-b9a91a1a/pt" style="margin-bottom:7px;">
+                  <span class="fa fa-linkedin-square fa-2x" style="float:right; margin-top: 12px;">
+                  </span>
+                </a>
+                <h4>Paulo Fernando Ferreira Rosa</h4>
+                <p>Coordenador do projeto</p>
+              </div>
+              <a class="btn btn-info button-member" href="http://lattes.cnpq.br/1512717941866097" role="button">
+                Currículo Lattes
               </a>
-              <h4>Paulo Fernando Ferreira Rosa</h4>
-              <p>Coordenador do projeto</p>
-            </div>
-            <a class="btn btn-info button-member" href="http://lattes.cnpq.br/1512717941866097" role="button">
-              Currículo Lattes
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4 member-container">
-          <div class="member">
-            <div class="col-md-6">
-              <img src="imgs/renault.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
-            </div>
-            <div class="col-md-6">
-              <a href="https://br.linkedin.com/in/luiz-renault-leite-rodrigues-61542247">
-                <span class="fa fa-linkedin-square fa-2x" style="float:right; margin-top: 12px;">
-                </span>
-              </a>
-              <h4>Luiz Renault Leite Rodrigues</h4>
-              <p>Orientador do projeto mecânico e eletrônico</p>
             </div>
           </div>
+          <div class="col-md-4 member-container">
+            <div class="member">
+              <div class="col-md-6">
+                <img src="imgs/renault.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
+              </div>
+              <div class="col-md-6">
+                <a href="https://br.linkedin.com/in/luiz-renault-leite-rodrigues-61542247">
+                  <span class="fa fa-linkedin-square fa-2x" style="float:right; margin-top: 12px;">
+                  </span>
+                </a>
+                <h4>Luiz Renault Leite Rodrigues</h4>
+                <p>Orientador do projeto mecânico e eletrônico</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <h3>Alunos:</h3>
+        <div class="row">
+          <h3>Alunos:</h3>
+          <br>
+          <div class="col-md-4 member-container">
+            <div class="member">
+              <div class="col-md-6">
+                <img src="imgs/gustavo.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
+              </div>
+              <div class="col-md-6">
+                <a href="https://www.facebook.com/gustavokcouto">
+                  <span class="fa fa-facebook-official fa-2x" style="float:right; margin-top: 12px;">
+                  </span>
+                </a>
+                <h4>Gustavo Claudio Karl Couto</h4>
+                <p>Representante do time e líder da eletrônica</p>
+              </div>
+              <a class="btn btn-info button-member" href="http://lattes.cnpq.br/9446553913259023" role="button">
+                Currículo Lattes
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 member-container">
+            <div class="member">
+              <div class="col-md-6">
+                <img src="imgs/luis_farias.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
+              </div>
+              <div class="col-md-6">
+                <a href="https://www.facebook.com/luisdavid.farias?fref=ts">
+                  <span class="fa fa-facebook-official fa-2x" style="float:right; margin-top: 12px;">
+                  </span>
+                </a>
+                <h4>Luis David Peregrino de Farias </h4>
+                <p>Líder da mecânica</p>
+              </div>
+              <a class="btn btn-info button-member" href="http://lattes.cnpq.br/2377420576406243" role="button">
+                Currículo Lattes
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 member-container">
+            <div class="member">
+              <div class="col-md-6">
+                <img src="imgs/jan.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
+              </div>
+              <div class="col-md-6">
+                <a href="https://www.facebook.com/jansegre?fref=ts">
+                  <span class="fa fa-facebook-official fa-2x" style="float:right; margin-top: 12px;">
+                  </span>
+                </a>
+                <h4>Jan Lucas de Lima Segre</h4>
+                <p>Líder da inteligência</p>
+              </div>
+              <a class="btn btn-info button-member" href="http://lattes.cnpq.br/2377420576406243" role="button">
+                Currículo Lattes
+              </a>
+            </div>
+          </div>         
+        </div>
         <br>
-        <div class="col-md-4 member-container">
-          <div class="member">
-            <div class="col-md-6">
-              <img src="imgs/gustavo.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
-            </div>
-            <div class="col-md-6">
-              <a href="https://www.facebook.com/gustavokcouto">
-                <span class="fa fa-facebook-official fa-2x" style="float:right; margin-top: 12px;">
-                </span>
+        <div class="row">
+          <div class="col-md-4 member-container">
+            <div class="member">
+              <div class="col-md-6">
+                <img src="imgs/jonnathan.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
+              </div>
+              <div class="col-md-6">
+                <a href="https://br.linkedin.com/in/johnathan-fercher-79013491">
+                  <span class="fa fa-linkedin-square fa-2x" style="float:right; margin-top: 12px;">
+                  </span>
+                </a>
+                <h4>Johnathan Fercher da Rosa</h4>
+                <p>Membro da inteligência</p>
+              </div>
+              <a class="btn btn-info button-member" href="http://lattes.cnpq.br/9321657996189139" role="button">
+                Currículo Lattes
               </a>
-              <h4>Gustavo Claudio Karl Couto</h4>
-              <p>Representante do time e líder da eletrônica</p>
             </div>
-            <a class="btn btn-info button-member" href="http://lattes.cnpq.br/9446553913259023" role="button">
-              Currículo Lattes
-            </a>
           </div>
-        </div>
-        <div class="col-md-4 member-container">
-          <div class="member">
-            <div class="col-md-6">
-              <img src="imgs/luis_farias.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
-            </div>
-            <div class="col-md-6">
-              <a href="https://www.facebook.com/luisdavid.farias?fref=ts">
-                <span class="fa fa-facebook-official fa-2x" style="float:right; margin-top: 12px;">
-                </span>
+          <div class="col-md-4 member-container">
+            <div class="member">
+              <div class="col-md-6">
+                <img src="imgs/picoli.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
+              </div>
+              <div class="col-md-6">
+                <a href="https://www.facebook.com/renan.picolidesouza?fref=ts">
+                  <span class="fa fa-facebook-official fa-2x" style="float:right; margin-top: 12px;">
+                  </span>
+                </a>
+                <h4>Renan Pícoli</h4>
+                <p>Membro da eletrônica</p>
+              </div>
+              <a class="btn btn-info button-member" href="http://lattes.cnpq.br/6941095028724755" role="button">
+                Currículo Lattes
               </a>
-              <h4>Luis David Peregrino de Farias </h4>
-              <p>Líder da mecânica</p>
             </div>
-          <a class="btn btn-info button-member" href="http://lattes.cnpq.br/2377420576406243" role="button">
-            Currículo Lattes
-          </a>
           </div>
-        </div>
-        <div class="col-md-4 member-container">
-          <div class="member">
-            <div class="col-md-6">
-              <img src="imgs/jan.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
-            </div>
-            <div class="col-md-6">
-              <a href="https://www.facebook.com/jansegre?fref=ts">
-                <span class="fa fa-facebook-official fa-2x" style="float:right; margin-top: 12px;">
-                </span>
+          <div class="col-md-4 member-container">
+            <div class="member">
+              <div class="col-md-6">
+                <img src="imgs/onias.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
+              </div>
+              <div class="col-md-6">
+                <a href="https://www.facebook.com/onias.castelo?fref=ts">
+                  <span class="fa fa-facebook-official fa-2x" style="float:right; margin-top: 12px;">
+                  </span>
+                </a>
+                <h4>Onias Castelo Branco Silveira</h4>
+                <p>Membro da eletrônica</p>
+              </div>
+              <a class="btn btn-info button-member" href="http://lattes.cnpq.br/0213619939209914" role="button">
+                Currículo Lattes
               </a>
-              <h4>Jan Lucas de Lima Segre</h4>
-              <p>Líder da inteligência</p>
-            </div>
-          <a class="btn btn-info button-member" href="http://lattes.cnpq.br/2377420576406243" role="button">
-            Currículo Lattes
-          </a>
-          </div>
-        </div>         
-      </div>
-      <br>
-      <div class="row">
-        <div class="col-md-4 member-container">
-          <div class="member">
-            <div class="col-md-6">
-              <img src="imgs/jonnathan.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
-            </div>
-            <div class="col-md-6">
-              <a href="https://br.linkedin.com/in/johnathan-fercher-79013491">
-                <span class="fa fa-linkedin-square fa-2x" style="float:right; margin-top: 12px;">
-                </span>
-              </a>
-              <h4>Johnathan Fercher da Rosa</h4>
-              <p>Membro da inteligência</p>
-            </div>
-            <a class="btn btn-info button-member" href="http://lattes.cnpq.br/9321657996189139" role="button">
-              Currículo Lattes
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4 member-container">
-          <div class="member">
-            <div class="col-md-6">
-              <img src="imgs/picoli.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
-            </div>
-            <div class="col-md-6">
-              <a href="https://www.facebook.com/renan.picolidesouza?fref=ts">
-                <span class="fa fa-facebook-official fa-2x" style="float:right; margin-top: 12px;">
-                </span>
-              </a>
-              <h4>Renan Pícoli</h4>
-              <p>Membro da eletrônica</p>
-            </div>
-            <a class="btn btn-info button-member" " href="http://lattes.cnpq.br/6941095028724755" role="button">
-              Currículo Lattes
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4 member-container">
-          <div class="member">
-            <div class="col-md-6">
-              <img src="imgs/onias.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
-            </div>
-            <div class="col-md-6">
-              <a href="https://www.facebook.com/onias.castelo?fref=ts">
-                <span class="fa fa-facebook-official fa-2x" style="float:right; margin-top: 12px;">
-                </span>
-              </a>
-              <h4>Onias Castelo Branco Silveira</h4>
-              <p>Membro da eletrônica</p>
-            </div>
-            <a class="btn btn-info button-member" href="http://lattes.cnpq.br/0213619939209914" role="button">
-              Currículo Lattes
-            </a>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="col-md-4 member-container">
-          <div class="member">
-            <div class="col-md-6">
-              <img src="imgs/luciano.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
-            </div>
-            <div class="col-md-6">
-              <a href="https://www.facebook.com/profile.php?id=100007139924935&fref=ts">
-                <span class="fa fa-facebook-official fa-2x" style="float:right; margin-top: 12px;">
-                </span>
-              </a>
-              <h4>Luciano Barrera</h4>
-              <p>Membro da inteligência</p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
+        <br>
+        <div class="row">
+          <div class="col-md-4 member-container">
+            <div class="member">
+              <div class="col-md-6">
+                <img src="imgs/luciano.jpg" class="center-block img-circle" style="margin-top: 10px;" height=160px>
+              </div>
+              <div class="col-md-6">
+                <a href="https://www.facebook.com/profile.php?id=100007139924935&fref=ts">
+                  <span class="fa fa-facebook-official fa-2x" style="float:right; margin-top: 12px;">
+                  </span>
+                </a>
+                <h4>Luciano Barrera</h4>
+                <p>Membro da inteligência</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <br>
         <br>
         <hr>
-        <h2>Publicações</h2>
-        <ul>
-          <li>
-            <p>
-              Segre, J. e Bramigk, V. 
-              <a href="pubs/pfc_jan_bramigk.pdf">
-                "Uma Ferramenta de Representação Comportamental Baseada em Otimização para Futebol de Robôs." 
-              </a>
-              Orientadores: Paulo Fernando Ferreira Rosa e Bruno Eduardo Madeira
-            </p>
-          </li>
-          <li>
-            <p>
-              Almeida, D. e Amaral, T. 
-              <a href="pubs/pfc_navarro_felix.pdf">
-                "Planejamento de Movimento Baseado em Física no Ambiente da Small Size League" 
-              </a>
-              Orientador: Paulo Fernando Ferreira Rosa
-            </p>
-          </li>
-        </ul>
       </div>
-      <hr>
-      <footer>
-        <p>&copy; 2016 RoboIME, Org.</p>
-      </footer>
+    </div>
+    <div class="section">
+      <span id="pub" class="anchor"></span>
+      <div class="container">
+        <div class="row">
+          <h2>Publicações</h2>
+          <ul>
+            <li>
+              <p>
+                Segre, J. e Bramigk, V. 
+                <a href="pubs/pfc_jan_bramigk.pdf">
+                  "Uma Ferramenta de Representação Comportamental Baseada em Otimização para Futebol de Robôs." 
+                </a>
+                Orientadores: Paulo Fernando Ferreira Rosa e Bruno Eduardo Madeira
+              </p>
+            </li>
+            <li>
+              <p>
+                Almeida, D. e Amaral, T. 
+                <a href="pubs/pfc_navarro_felix.pdf">
+                  "Planejamento de Movimento Baseado em Física no Ambiente da Small Size League" 
+                </a>
+                Orientador: Paulo Fernando Ferreira Rosa
+              </p>
+            </li>
+          </ul>
+        </div>
+        <hr>
+        <footer>
+          <p>&copy; 2016 RoboIME, Org.</p>
+        </footer>
+      </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
