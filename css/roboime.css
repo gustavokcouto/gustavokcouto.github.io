@@ -1,0 +1,48 @@
+.img-roboime {
+max-width: auto; /* or to whatever you want here */
+max-height: 200px; /* or to whatever you want here */
+}
+.member {
+    position: relative;
+    height: 180px;
+    box-shadow: 0 1px 2px #888;
+    background-color: #EEE;
+    border-radius: 3px;
+}
+.pages_team #main {
+    background-color: #EEE;
+}
+body {
+  background: #fff;
+  color: #222;
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+  position: relative;
+  cursor: auto;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  position: relative;
+  min-height: 100vh;
+}
+.pages_team .member-container {
+    margin-top: 25px;
+}
+.vertical-align {
+    display: inline-block;
+  vertical-align: middle;
+}
+.img-roboime2 {
+  vertical-align: middle;
+  horizontal-align: middle;
+  align-items: center;
+}
+.button-member {
+  position:absolute;
+  bottom:0;
+  margin:12px;
+  right: 0;
+}
