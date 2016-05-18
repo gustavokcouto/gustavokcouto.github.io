@@ -43,3 +43,9 @@ max-height: 200px; /* or to whatever you want here */
 .section {
   position: relative;
 }
+body {
+  padding-top: 70px;
+  padding-bottom: 100px;
+  position: relative;
+  min-height: 100vh;
+}
