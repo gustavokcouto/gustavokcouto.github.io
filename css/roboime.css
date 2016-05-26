@@ -4,12 +4,9 @@ max-height: 200px; /* or to whatever you want here */
 }
 .member {
     position: relative;
-    height: 180px;
     box-shadow: 0 1px 2px #888;
     background-color: #EEE;
     border-radius: 3px;
-    margin-bottom: 25px;
-    margin-top: 25px;
 }
 .pages_team #main {
     background-color: #EEE;
