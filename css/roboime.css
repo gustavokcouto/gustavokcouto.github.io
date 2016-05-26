@@ -14,7 +14,7 @@ max-height: 200px; /* or to whatever you want here */
     }
     .img-member{
         margin-top: 15px; 
-        max-height: 140px;
+        max-height: 120px;
         height: 100%
     }
 }
