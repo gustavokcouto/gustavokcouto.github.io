@@ -28,7 +28,7 @@ max-height: 200px; /* or to whatever you want here */
   align-items: center;
 }
 .button-member {
-  position:absolute;
+  position:relative;
   bottom:0;
   margin:12px;
   right: 0;
