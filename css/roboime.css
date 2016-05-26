@@ -26,7 +26,11 @@ max-height: 200px; /* or to whatever you want here */
     border-radius: 3px;
     margin-top: 10px;
     margin-bottom: 10px;
-}
+    }
+    .img-member{
+        margin-top: 10px; 
+        height: 80px;
+    }
 }
 .pages_team #main {
     background-color: #EEE;
