@@ -12,6 +12,10 @@ max-height: 200px; /* or to whatever you want here */
         margin-top: 10px;
         margin-bottom: 10px;
     }
+    .img-member{
+        margin-top: 10px; 
+        height: 160px;
+    }
 }
 @media (max-width: 768px) {
 .member {
