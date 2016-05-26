@@ -14,6 +14,7 @@ max-height: 200px; /* or to whatever you want here */
 }
 .pages_team .member-container {
     margin-top: 25px;
+    margin-bottom: 25px;
     height: 240px;
 }
 .vertical-align {
