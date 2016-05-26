@@ -7,8 +7,7 @@ max-height: 200px; /* or to whatever you want here */
         position: relative;
         box-shadow: 0 1px 2px #888;
         background-color: #EEE;
-        min-height: 160px;
-        height: 100%;
+        min-height: 250px;
         border-radius: 3px;
         margin-top: 10px;
         margin-bottom: 10px;
