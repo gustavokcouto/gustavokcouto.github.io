@@ -167,7 +167,7 @@
       <div class="container">
         <h2>Contato</h2>
         <br>
-        <form action="https://formspree.io/gustavokarlcouto@gmail.com" method="POST">
+        <form action="https://formspree.io/gustavokarlcouto@gmail.com" method="POST" id="contact-form">
           <div class="row">
             <div class="col-md-6">
               <fieldset class="form-group">
@@ -196,12 +196,20 @@
       </div>
     </div>
     <script>
-      $.ajax({
-        url: "//formspree.io/gustavokarlcouto@gmail.com", 
-        method: "POST",
-        data: {message: "hello!"},
-        dataType: "json"
-      });
+      $(document).ready(
+        function() {
+          var contactForm = $('#contact-form');
+          contactForm.on('success.form.bv', function(e) {
+            e.preventDefault();
+            $.ajax({
+              url: "//formspree.io/gustavokarlcouto@gmail.com", 
+              method: "POST",
+              data: {message: "hello!"},
+              dataType: "json"
+            });
+          };
+        }
+      );
     </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
