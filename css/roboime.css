@@ -34,6 +34,9 @@ max-height: 200px; /* or to whatever you want here */
         max-height: 120px;
     }
 }
+.img-apoio{
+    max-height: 300px;
+}
 .pages_team #main {
     background-color: #EEE;
 }
