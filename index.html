@@ -11,6 +11,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+  
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/roboime.css" rel="stylesheet">
+
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset=80px>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -198,96 +203,73 @@
         </footer>
       </div>
     </div>
-<script>
-$(document).ready(
-  function() {
-    var contactForm = $('#contact-form');
-    contactForm.bootstrapValidator({
-      message: 'This value is not valid',
-      feedbackIcons: {
-        valid: 'glyphicon glyphicon-ok',
-        invalid: 'glyphicon glyphicon-remove',
-        validating: 'glyphicon glyphicon-refresh'
-      },
-      fields: {
-        _replyto: {
-          validators: {
-            notEmpty: {
-              message: 'The email address is required'
+    <script>
+      $(document).ready(
+        function() {
+          var contactForm = $('#contact-form');
+          contactForm.bootstrapValidator({
+          message: 'This value is not valid',
+          feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+          },
+          fields: {
+            _replyto: {
+              validators: {
+                notEmpty: {
+                  message: 'The email address is required'
+                },
+                emailAddress: {
+                  message: 'The email address is not valid'
+                }
+              }
             },
-            emailAddress: {
-              message: 'The email address is not valid'
+            message: {
+              validators: {
+                notEmpty: {
+                  message: 'The Message is required and cannot be empty'
+                }
+              }
             }
           }
-        },
-        message: {
-          validators: {
-            notEmpty: {
-              message: 'The Message is required and cannot be empty'
+        });
+        contactForm.on('success.form.bv', function(e) {
+          e.preventDefault();
+          $.ajax({
+            url: contactForm.attr('action'),
+            method: contactForm.attr('method'),
+            data: contactForm.serialize(),
+            dataType: 'json',
+            beforeSend: function() {
+              contactForm.append('<div class="alert-loading" >Sending message…</div>');
+            },
+            success: function(data) {
+              contactForm.find('.alert-loading').remove();
+              var succesBox = $('<div class="alert alert-success alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Thanks!</strong> I will reply in a few hours' + '</div>').hide();
+              contactForm.before(succesBox);
+              succesBox.fadeIn("slow");
+              succesBox.fadeTo(2000, 500).slideUp(500, function() {
+                $(".alert-success").alert('close');
+              });
+            },
+            error: function(err) {
+              contactForm.find('.alert-loading').remove();
+              var errorBox = $('<div class="alert alert-danger alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Error!</strong> Something went wrong' + '</div>').hide();
+              contactForm.before(errorBox);
+              errorBox.fadeIn("slow");
+              errorBox.fadeTo(2000, 500).slideUp(700, function() {
+                $(".alert-danger").alert('close');
+              });
             }
-          }
-        }
-      }
-    });
-    contactForm.on('success.form.bv', function(e) {
-      e.preventDefault();
-      $.ajax({
-        url: contactForm.attr('action'),
-        method: contactForm.attr('method'),
-        data: contactForm.serialize(),
-        dataType: 'json',
-        beforeSend: function() {
-          contactForm.append('<div class="alert-loading" >Sending message…</div>');
-        },
-        success: function(data) {
-          contactForm.find('.alert-loading').remove();
-          var succesBox = $('<div class="alert alert-success alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Thanks!</strong> I will reply in a few hours' + '</div>').hide();
-          contactForm.before(succesBox);
-          succesBox.fadeIn("slow");
-          succesBox.fadeTo(2000, 500).slideUp(500, function() {
-            $(".alert-success").alert('close');
           });
-        },
-        error: function(err) {
-          contactForm.find('.alert-loading').remove();
-          var errorBox = $('<div class="alert alert-danger alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Error!</strong> Something went wrong' + '</div>').hide();
-          contactForm.before(errorBox);
-          errorBox.fadeIn("slow");
-          errorBox.fadeTo(2000, 500).slideUp(700, function() {
-            $(".alert-danger").alert('close');
-          });
-        }
+        });
       });
-    });
-  });
-</script>
-
-<div class="container">
-  <div class="row ">
-    <form role="form" method="POST" action="//formspree.io/your.email@example.com" id="contact-form" >
-      <input type="hidden" name="_subject" value="Information request" />
-      <input type="text" name="_gotcha" style="display:none" />
-      <div class="row">
-        <div class="col-md-12">
-          <div class="form-group">
-            <input type="email" class="form-control" name="_replyto" autocomplete="off" id="email" placeholder="Your email">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="form-group">
-            <textarea class="form-control textarea" rows="3" name="message" id="message" placeholder="Your message"></textarea>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <button type="submit" class="btn-block btn-lg btn">Send a message</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
+    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/smooth-scroll.js"></script>
   </body>
 </html>  
