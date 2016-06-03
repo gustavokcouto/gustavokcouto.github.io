@@ -35,7 +35,7 @@ max-height: 200px; /* or to whatever you want here */
     }
 }
 .img-apoio{
-    max-height: 160px;
+    height: 160px;
     width: auto;
 }
 .pages_team #main {
