@@ -14,10 +14,9 @@ max-height: 200px; /* or to whatever you want here */
     }
     .img-member{
         margin-top: 15px; 
-        max-height: 120px;
-        height: 100%
-        width = auto;
-	display:block
+	height: 120px;
+        width: auto;
+	display:block;
     }
 }
 @media (max-width: 768px) {
