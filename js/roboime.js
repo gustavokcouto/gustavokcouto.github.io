@@ -1,7 +1,7 @@
 $(document).ready(
   function() {
     var contactForm = $('#contact-form');
-    $("button#contact_submit").click(function(){
+    $("button#contato_submit").click(function(){
       $.ajax({
         url: contactForm.attr('action'),
         method: contactForm.attr('method'),
