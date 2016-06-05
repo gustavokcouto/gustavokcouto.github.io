@@ -1,4 +1,36 @@
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/roboime.css" rel="stylesheet">
+
+    <script src="js/roboime.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/smooth-scroll.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    
+
+
+
+<div class="section">
+      <span id="inscription" class="anchor"></span>
+      <div class="container">
+        <h2>Inscreva-se</h2>
+        <br>
+        <iframe src="https://docs.google.com/forms/d/1BA8sTfQWU0gtkmiF9RQrw53S6iY1GR0rB0pMvsIo_dQ/viewform?embedded=true" width="900" height="320" frameborder="0" marginheight="0" marginwidth="0">Carregando¿</iframe>
+        <hr>
+      </div>
+    </div>
+    
+
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>

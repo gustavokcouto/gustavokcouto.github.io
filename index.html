@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RoboIME</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/roboime.css" rel="stylesheet">
 
-    <script src="js/roboime.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/roboime.js"></script>
     <script type="text/javascript" src="js/smooth-scroll.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+
 
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset=80px>
@@ -44,7 +46,7 @@
                 <li><a class="page-scroll" href=".#times">Times</a></li>
                 <li><a class="page-scroll" href=".#desafios">Desafios</a></li>
                 <li><a class="page-scroll" href=".#apoio">Apoio</a></li>
-                <li><a class="page-scroll" href=".#inscription">Inscreva-se</a></li>
+                <li><a class="page-scroll" href=".#participe">Participe</a></li>
                 <li><a class="page-scroll" href=".#contato">Contato</a></li>
               </ul>
             </li>
@@ -164,11 +166,113 @@
       </div>
     </div>
     <div class="section">
-      <span id="inscription" class="anchor"></span>
+      <span id="participe" class="anchor"></span>
       <div class="container">
-        <h2>Inscreva-se</h2>
+        <h2>Participe</h2>
+        </br>
+        <form action="https://formspree.io/gustavokarlcouto@gmail.com" method="POST" id="contact-form">
+          <h3>Qual o seu nome?</h3>
+          </br>
+          <div class="row">
+            <div class="col-md-6">
+              <fieldset class="form-group">
+                <input type="participe_name" class="form-control" id="participe_name" placeholder="Nome" name="Nome">
+              </fieldset>
+            </div>
+          </div>
+          <h3>Qual o seu ano?</h3>
+          </br>
+          <div class="radio">
+            <label>
+              <input type="radio" name="Ano" id="1_ano" value="1_ano">
+              1 ano
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="Ano" id="2_ano" value="2_ano">
+              2 ano
+            </label>
+          </div>
+          <div class="radio disabled">
+            <label>
+              <input type="radio" name="Ano" id="3_ano" value="3_ano">
+              3 ano
+            </label>
+          </div>
+          <div class="radio disabled">
+            <label>
+              <input type="radio" name="Ano" id="4_ano" value="4_ano">
+              4 ano
+            </label>
+          </div>
+          <div class="radio disabled">
+            <label>
+              <input type="radio" name="Ano" id="5_ano" value="5_ano">
+              5 ano
+            </label>
+          </div>
+          <h3>Tem interesse em entrar em que time?</h3>
+          </br>
+          <div class="radio disabled">
+            <label>
+              <input type="radio" name="time" id="futebol" value="futebol">
+              Futebol de robôs
+            </label>
+          </div>
+          <div class="radio disabled">
+            <label>
+              <input type="radio" name="time" id="sek" value="sek">
+              SEK
+            </label>
+          </div>
+          <div class="radio disabled">
+            <label>
+              <input type="radio" name="time" id="batalha" value="batalha">
+              Batalha de robôs
+            </label>
+          </div>
+          <h3>Tem mais interesse em qual área?</h3>
+          </br>
+          <div class="radio disabled">
+            <label>
+              <input type="radio" name="area" id="elo" value="elo">
+              Eletrônica
+            </label>
+          </div>
+          <div class="radio disabled">
+            <label>
+              <input type="radio" name="area" id="mec" value="mec">
+              Mecânica
+            </label>
+          </div>
+          <div class="radio disabled">
+            <label>
+              <input type="radio" name="area" id="comp" value="comp">
+              Computação
+            </label>
+          </div>
+          <h3>Qual o seu email?</h3>
+          </br>
+          <div class="row">
+            <div class="col-md-6">
+              <fieldset class="form-group">
+                <input type="email" class="form-control" id="participe_email" placeholder="Email" name="email">
+              </fieldset>
+            </div>
+          </div>
+          <h3>Qual o seu número de whatsapp?</h3>
+          </br>
+          <div class="row">
+            <div class="col-md-6">
+              <fieldset class="form-group">
+                <input type="whatsapp" class="form-control" id="participe_whatsapp" placeholder="Whatsapp" name="whatsapp">
+              </fieldset>
+            </div>
+          </div>
+          <button type="submit" value="Send" class="btn btn-primary">Enviar</button>
+        </form>
         <br>
-        <iframe src="https://docs.google.com/forms/d/1BA8sTfQWU0gtkmiF9RQrw53S6iY1GR0rB0pMvsIo_dQ/viewform?embedded=true" width="900" height="320" frameborder="0" marginheight="0" marginwidth="0">Carregando¿</iframe>
         <hr>
       </div>
     </div>
@@ -181,6 +285,14 @@
           <div class="row">
             <div class="col-md-6">
               <fieldset class="form-group">
+                <label for="form_name">Nome</label>
+                <input type="name" class="form-control" id="form_name" placeholder="Nome" name="_name">
+              </fieldset>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <fieldset class="form-group">
                 <label for="form_email">Email</label>
                 <input type="email" class="form-control" id="form_email" placeholder="Email" name="_replyto">
               </fieldset>
@@ -190,7 +302,7 @@
             <div class="col-md-12">
               <fieldset class="form-group">
                 <label for="form_mesage">Mensagem</label>
-                <textarea id="form_message" name="message" class="form-control" rows="4"></textarea>
+                <textarea id="form_message" name="message" class="form-control" placeholder="Mensagem" rows="4"></textarea>
               </fieldset>
             </div>
           </div>
