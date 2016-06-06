@@ -8,7 +8,7 @@ $(document).ready(
         data: contactForm.serialize(),
         dataType: 'json',
         beforeSend: function() {
-          contactForm.append('<div class="alert-loading" >Sending message…</div>');
+          contactForm.append('<div class="alert-loading" >Enviando mensagem...</div>');
         },
         success: function(data) {
           contactForm.find('.alert-loading').remove();
