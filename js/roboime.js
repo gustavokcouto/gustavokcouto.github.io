@@ -21,7 +21,7 @@ $(document).ready(
         },
         error: function(err) {
           contactForm.find('.alert-loading').remove();
-          var errorBox = $('<div class="alert alert-danger alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Erro!</strong> Tem certeza que todos os campos foram preenchidos de forma corretamente?' + '</div>').hide();
+          var errorBox = $('<div class="alert alert-danger alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Erro!</strong>Tem certeza que todos os campos foram preenchidos corretamente?' + '</div>').hide();
           contactForm.before(errorBox);
           errorBox.fadeIn("slow");
           errorBox.fadeTo(2000, 500).slideUp(700, function() {
@@ -51,7 +51,7 @@ $(document).ready(
         },
         error: function(err) {
           participeForm.find('.alert-loading').remove();
-          var errorBox = $('<div class="alert alert-danger alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Erro!</strong> Tem certeza que todos os campos foram preenchidos de forma corretamente?' + '</div>').hide();
+          var errorBox = $('<div class="alert alert-danger alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Erro!</strong> Tem certeza que todos os campos foram preenchidos corretamente?' + '</div>').hide();
           participeForm.after(errorBox);
           errorBox.fadeIn("slow");
           errorBox.fadeTo(2000, 500).slideUp(700, function() {
