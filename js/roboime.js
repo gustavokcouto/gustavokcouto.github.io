@@ -12,7 +12,7 @@ $(document).ready(
         },
         success: function(data) {
           contactForm.find('.alert-loading').remove();
-          var succesBox = $('<div class="alert alert-success alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Thanks!</strong> I will reply in a few hours' + '</div>').hide();
+          var succesBox = $('<div class="alert alert-success alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Thanks!</strong> Obrigado por se inscrever, entraremos em contato em breve' + '</div>').hide();
           contactForm.before(succesBox);
           succesBox.fadeIn("slow");
           succesBox.fadeTo(2000, 500).slideUp(500, function() {
@@ -21,7 +21,7 @@ $(document).ready(
         },
         error: function(err) {
           contactForm.find('.alert-loading').remove();
-          var errorBox = $('<div class="alert alert-danger alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Error!</strong> Something went wrong' + '</div>').hide();
+          var errorBox = $('<div class="alert alert-danger alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Error!</strong> Tem certeza que já preencheu todos os campos?' + '</div>').hide();
           contactForm.before(errorBox);
           errorBox.fadeIn("slow");
           errorBox.fadeTo(2000, 500).slideUp(700, function() {
@@ -38,11 +38,11 @@ $(document).ready(
         data: participeForm.serialize(),
         dataType: 'json',
         beforeSend: function() {
-          participeForm.append('<div class="alert-loading" >Sending message<85></div>');
+          participeForm.append('<div class="alert-loading" >Enviando mensagem...</div>');
         },
         success: function(data) {
           participeForm.find('.alert-loading').remove();
-          var succesBox = $('<div class="alert alert-success alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Thanks!</strong> I will reply in a few hours' + '</div>').hide();
+          var succesBox = $('<div class="alert alert-success alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Thanks!</strong> Obrigado por entrar em contato conosco, em breve enviaremos uma resposta' + '</div>').hide();
           participeForm.after(succesBox);
           succesBox.fadeIn("slow");
           succesBox.fadeTo(2000, 500).slideUp(500, function() {
@@ -51,7 +51,7 @@ $(document).ready(
         },
         error: function(err) {
           participeForm.find('.alert-loading').remove();
-          var errorBox = $('<div class="alert alert-danger alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Error!</strong> Something went wrong' + '</div>').hide();
+          var errorBox = $('<div class="alert alert-danger alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Error!</strong> Tem certeza que preencheu todos os campos?' + '</div>').hide();
           participeForm.after(errorBox);
           errorBox.fadeIn("slow");
           errorBox.fadeTo(2000, 500).slideUp(700, function() {
