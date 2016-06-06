@@ -43,7 +43,7 @@ $(document).ready(
         success: function(data) {
           participe.find('.alert-loading').remove();
           var succesBox = $('<div class="alert alert-success alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Thanks!</strong> I will reply in a few hours' + '</div>').hide();
-          participeForm.before(succesBox);
+          participeForm.after(succesBox);
           succesBox.fadeIn("slow");
           succesBox.fadeTo(2000, 500).slideUp(500, function() {
             $(".alert-success").alert('close');
@@ -52,7 +52,7 @@ $(document).ready(
         error: function(err) {
           participeForm.find('.alert-loading').remove();
           var errorBox = $('<div class="alert alert-danger alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Error!</strong> Something went wrong' + '</div>').hide();
-          participeForm.before(errorBox);
+          participeForm.after(errorBox);
           errorBox.fadeIn("slow");
           errorBox.fadeTo(2000, 500).slideUp(700, function() {
             $(".alert-danger").alert('close');
