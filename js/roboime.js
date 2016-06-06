@@ -41,7 +41,7 @@ $(document).ready(
           participeForm.append('<div class="alert-loading" >Sending message<85></div>');
         },
         success: function(data) {
-          participe.find('.alert-loading').remove();
+          participeForm.find('.alert-loading').remove();
           var succesBox = $('<div class="alert alert-success alert-dismissible" role="alert">' + '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + '<strong>Thanks!</strong> I will reply in a few hours' + '</div>').hide();
           participeForm.after(succesBox);
           succesBox.fadeIn("slow");
