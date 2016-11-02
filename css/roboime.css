@@ -18,6 +18,11 @@ max-height: 200px; /* or to whatever you want here */
         width: auto;
 	display:block;
     }
+    .icon{
+	height: 16px;
+        width: auto;
+	display:block;
+    }
 }
 @media (max-width: 768px) {
 .member {
@@ -32,6 +37,11 @@ max-height: 200px; /* or to whatever you want here */
     .img-member{
         margin-top: 10px; 
         max-height: 120px;
+    }
+    .icon{
+	height: 16px;
+        width: auto;
+	display:block;
     }
 }
 .img-apoio{
